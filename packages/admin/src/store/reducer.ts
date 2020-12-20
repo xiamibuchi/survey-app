@@ -14,7 +14,7 @@ const defaultState: State = {
 };
 
 function reducer(state = defaultState, action: Action) {
-  if (action.type === "CHANGE_TOKEN") {
+  if (action.type === "change_input_value") {
     const newState = JSON.parse(JSON.stringify(state)); // 对之前的state做一次深拷贝
     newState.inputValue = action.value;
     return newState;
